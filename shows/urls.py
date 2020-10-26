@@ -3,12 +3,8 @@ from . import views
 
 urlpatterns = [
     path("new", views.add_new),
-    # path(
-    #     "create",
-    # ),
-    # path(
-    #     "<>",
-    # ),
+    path("create", views.create),
+    path("<int:show_id>", views.this_show),
     # path(
     #     "",
     # ),

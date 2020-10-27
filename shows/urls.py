@@ -5,17 +5,8 @@ urlpatterns = [
     path("new", views.add_new),
     path("create", views.create),
     path("<int:show_id>", views.this_show),
-    # path(
-    #     "",
-    # ),
-    # path(
-    #     "<>/edit",
-    # ),
-    # path(
-    #     "<>/update",
-    # ),
-    # path(
-    #     "<>/destroy",
-    # ),
+    path("<int:show_id>/edit", views.edit),
+    path("<int:show_id>/update", views.update),
+    path("<int:show_id>/destroy", views.destroy),
     path("", views.index),
 ]

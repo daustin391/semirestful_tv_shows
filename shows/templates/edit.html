@@ -1,0 +1,15 @@
+{% extends "form.html" %}
+
+{% block heading %}Edit Show {{this_show.id}} {% endblock %}
+
+{% block form %} action="./update" {% endblock %}
+
+{% block title %} value="{{this_show.title}}" {% endblock %}
+
+{% block network %} value="{{this_show.network}}" {% endblock %}
+
+{% block release_date %} value="{{release_date}}" {% endblock %}
+
+{% block desc %} {{this_show.desc}} {% endblock %}
+
+{% block button %} Update {% endblock %}

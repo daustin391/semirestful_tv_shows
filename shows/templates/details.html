@@ -5,18 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Read (One)</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body>
-    <h1>TV Show</h1>
-    <p>Title: {{this_show.title}}</p>
-    <p>Network: {{this_show.network}} </p>
-    <p>Release Date: {{this_show.release_date}} </p>
-    <p>Description: {{this_show.desc}}</p>
-    <p>Last Updated: {{this_show.updated_at}} </p>
-    <div>
-        <a href="">Edit</a><a href="">Delete</a>
-    </div>
+    <main>
+        <h1>TV Show {{this_show.id}}</h1>
+        <p>Title: {{this_show.title}}</p>
+        <p>Network: {{this_show.network}} </p>
+        <p>Release Date: {{this_show.release_date}} </p>
+        <p>Description: {{this_show.desc}}</p>
+        <p>Last Updated: {{this_show.updated_at}} </p>
+        <div>
+            <a href="{{this_show.id}}/edit">Edit</a>
+            |
+            <a href="{{this_show.id}}/destroy">Delete</a>
+        </div>
+    </main>
 </body>
 
 </html>

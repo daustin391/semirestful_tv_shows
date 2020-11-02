@@ -8,8 +8,10 @@
 
 {% block network %} value="{{this_show.network}}" {% endblock %}
 
-{% block release_date %} value="{{release_date}}" {% endblock %}
+{% block release_date %} value="{{this_show.release_date|date:"Y-m-d"}}" {% endblock %}
 
-{% block desc %} {{this_show.desc}} {% endblock %}
+{% block desc %}{{this_show.desc}} {% endblock %}
 
 {% block button %} Update {% endblock %}
+
+{% block go %}<a href="/shows/{{this_show.id}}">Go to Show</a>{% endblock %}
